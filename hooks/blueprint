@@ -15,11 +15,10 @@ set -eu
 #validate_features none
 
 declare -a manifests
-manifests+=( manifests/buildkite-agent.yml )
+manifests+=(manifests/buildkite-agent.yml)
+manifests+=(manifests/operators/aws-credentials.yml)
+manifests+=(manifests/operators/git-ssh-private-key.yml)
+manifests+=(manifests/operators/scale.yml)
+manifests+=(manifests/genesis-operator.yml)
 
-for dir in features/*; do
-	if want_feature $(basename($dir)); then
-		manifests+=( $dir/*.yml )
-	fi
-done
-echo ${manifests[@]}
+echo "${manifests[@]}"
