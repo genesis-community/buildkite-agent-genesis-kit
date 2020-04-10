@@ -12,13 +12,16 @@ set -eu
 # function (takes a feature as a string, returns exit code 0 if present, non-
 # zero exit code otherwise).
 
-#validate_features none
+validate_features single-az
 
 declare -a manifests
 manifests+=(manifests/buildkite-agent.yml)
 manifests+=(manifests/operators/aws-credentials.yml)
 manifests+=(manifests/operators/git-ssh-private-key.yml)
 manifests+=(manifests/operators/scale.yml)
-manifests+=(manifests/genesis-operator.yml)
+
+if want_feature single-az; then
+  manifests+=(ops/single-az.yml)
+fi
 
 echo "${manifests[@]}"
