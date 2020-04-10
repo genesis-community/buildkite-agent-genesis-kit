@@ -1,5 +1,5 @@
 name:    buildkite-agent
-version: 1.0.0
+version: 1.1.0
 author:  James Hunt <james@niftylogic.com>
 docs:    https://github.com/starkandwayne/buildkite-agent-boshrelease
 code:    https://github.com/starkandwayne/buildkite-agent-genesis-kit
