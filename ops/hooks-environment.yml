@@ -1,0 +1,3 @@
+- type: replace
+  path: /instance_groups/name=buildkite-agent/jobs/name=buildkite-agent/properties/hooks?/environment
+  value: (( grab params.hooks-environment ))
