@@ -14,8 +14,8 @@ the following (using Genesis v2):
 # create a buildkite-agent-deployments repo using the latest version of the buildkite-agent kit
 genesis init --kit buildkite-agent
 
-# create a buildkite-agent-deployments repo using v1.1.2 of the buildkite-agent kit
-genesis init --kit buildkite-agent/1.1.2
+# create a buildkite-agent-deployments repo using v1.1.3 of the buildkite-agent kit
+genesis init --kit buildkite-agent/1.1.3
 
 # create a my-buildkite-agent-configs repo using the latest version of the buildkite-agent kit
 genesis init --kit buildkite-agent -d my-buildkite-agent-configs
