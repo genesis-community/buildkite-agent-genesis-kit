@@ -1,0 +1,9 @@
+apiVersion: vendir.k14s.io/v1alpha1
+directories:
+- contents:
+  - git:
+      commitTitle: release v1.1.0
+      sha: 6144f3144f7e185123dd3509c11a8f958484ed8d
+    path: buildkite-agent-boshrelease
+  path: manifests
+kind: LockConfig
