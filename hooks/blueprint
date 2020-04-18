@@ -16,10 +16,10 @@ validate_features single-az pre-start-script \
   hooks-environment
 
 declare -a manifests
-manifests+=(manifests/buildkite-agent.yml)
-manifests+=(manifests/operators/aws-credentials.yml)
-manifests+=(manifests/operators/git-ssh-private-key.yml)
-manifests+=(manifests/operators/scale.yml)
+manifests+=(manifests/buildkite-agent-boshrelease/manifests/buildkite-agent.yml)
+manifests+=(manifests/buildkite-agent-boshrelease/manifests/operators/aws-credentials.yml)
+manifests+=(manifests/buildkite-agent-boshrelease/manifests/operators/git-ssh-private-key.yml)
+manifests+=(manifests/buildkite-agent-boshrelease/manifests/operators/scale.yml)
 
 if want_feature single-az; then
   manifests+=(ops/single-az.yml)
@@ -28,7 +28,7 @@ if want_feature hooks-environment; then
   manifests+=(ops/hooks-environment.yml)
 fi
 if want_feature pre-start-script; then
-  manifests+=(manifests/operators/pre-start-script.yml)
+  manifests+=(manifests/buildkite-agent-boshrelease/manifests/operators/pre-start-script.yml)
 fi
 
 echo "${manifests[@]}"
